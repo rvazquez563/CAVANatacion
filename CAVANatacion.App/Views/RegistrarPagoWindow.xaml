@@ -1,0 +1,34 @@
+﻿<Window x:Class="CAVANatacion.App.Views.RegistrarPagoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registrar Pago" SizeToContent="WidthAndHeight" Width="241">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Alumno:" Margin="5"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" Margin="5" x:Name="cmbAlumnos" DisplayMemberPath="NombreCompleto" SelectionChanged="cmbAlumnos_SelectionChanged"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Plan:" Margin="5"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" Margin="5" x:Name="cmbPlan" DisplayMemberPath="NombreCompleto" SelectionChanged="cmbPlan_SelectionChanged"/>
+        <!--<TextBlock Grid.Row="1" Grid.Column="0" Text="Fecha de Pago:" Margin="5"/>
+        <DatePicker Grid.Row="1" Grid.Column="1" Margin="5" x:Name="dpFechaPago"/>-->
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Monto:" Margin="5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" x:Name="txtMonto"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Button Content="Aceptar" Click="BtnAceptar_Click" Margin="5"/>
+            <Button Content="Cancelar" Click="BtnCancelar_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

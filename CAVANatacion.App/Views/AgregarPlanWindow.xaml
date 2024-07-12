@@ -1,0 +1,36 @@
+﻿<Window x:Class="CAVANatacion.App.Views.AgregarPlanWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Agregar Plan" SizeToContent="WidthAndHeight">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Descripción:" VerticalAlignment="Center"/>
+        <TextBox x:Name="DescripcionTextBox" Grid.Row="0" Grid.Column="1" Margin="5" Width="200"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Días a la Semana:" VerticalAlignment="Center"/>
+        <TextBox x:Name="DiasAlaSemanaTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Width="200"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Tarifa:" VerticalAlignment="Center"/>
+        <TextBox x:Name="TarifaTextBox" Grid.Row="2" Grid.Column="1" Margin="5" Width="200"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Categoría:" VerticalAlignment="Center"/>
+        <ComboBox x:Name="CategoriaComboBox" Grid.Row="3" Grid.Column="1" Margin="5" Width="200" ItemsSource="{Binding Categorias}"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Button Content="Aceptar" Click="BtnAceptar_Click" Margin="5"/>
+            <Button Content="Cancelar" Click="BtnCancelar_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

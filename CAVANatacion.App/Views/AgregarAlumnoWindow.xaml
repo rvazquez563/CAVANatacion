@@ -1,0 +1,117 @@
+﻿<!--<Window x:Class="CAVANatacion.App.Views.AgregarAlumnoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Agregar Alumno" SizeToContent="WidthAndHeight">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Nombre:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Apellido:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Documento:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Email:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha de Ingreso:" VerticalAlignment="Center"/>
+        <DatePicker Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Plan:" VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Margin="5"/>
+
+        <CheckBox Grid.Row="6" Grid.ColumnSpan="2" Content="Pago del Mes" Margin="5" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Fecha de Pago:" Margin="5" VerticalAlignment="Center" />
+        <DatePicker Grid.Row="7" Grid.Column="1" Margin="5" Name="dpFechaPago" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="8" Grid.ColumnSpan="2" Content="Apto" Margin="5" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Fecha Vencimiento Apto:" Margin="5" VerticalAlignment="Center"/>
+        <DatePicker Grid.Row="9" Grid.Column="1" Margin="5"/>
+
+        <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Aceptar" Click="BtnAceptar_Click" Margin="5"/>
+            <Button Content="Cancelar" Click="BtnCancelar_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>-->
+<Window x:Class="CAVANatacion.App.Views.AgregarAlumnoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Agregar Alumno" SizeToContent="WidthAndHeight">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Nombre:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Name="txtNombre"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Apellido:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Name="txtApellido"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Documento:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="5" Name="txtDocumento"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Email:"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Name="txtEmail"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Telefono:"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Margin="5" Name="txtTelefono"/>
+        <!--<TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha de Ingreso:"/>
+        <DatePicker Grid.Row="4" Grid.Column="1" Margin="5" Name="dpFechaIngreso"/>-->
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Plan:"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Margin="5" Name="cbPlan" ItemsSource="{Binding Planes}" DisplayMemberPath="Descripcion" />
+
+        <!--<CheckBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="Pago del Mes" Margin="5" Name="chkPagoMes"/>-->
+        <CheckBox Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Apto" Margin="5" Name="chkApto"/>
+
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Fecha Vencimiento Apto:" Margin="5"/>
+        <DatePicker Grid.Row="8" Grid.Column="1" Margin="5" Name="dpFechaVencimientoApto"/>
+
+        <!--<TextBlock Grid.Row="9" Grid.Column="0" Text="Fecha de Pago:" Margin="5"/>-->
+        <!--<DatePicker Grid.Row="9" Grid.Column="1" Margin="5" Name="dpFechaPago"/>-->
+
+        <StackPanel Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Button Content="Aceptar" Click="BtnAceptar_Click" Margin="5"/>
+            <Button Content="Cancelar" Click="BtnCancelar_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
